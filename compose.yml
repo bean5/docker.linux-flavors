@@ -1,0 +1,24 @@
+name: linux-flavors
+
+services:
+  alpine:
+    build:
+      dockerfile_inline: |
+        FROM alpine:3.20.1
+        RUN apk update && apk upgrade
+        RUN apk add --no-cache bash curl htop git openssh rsync tmux wget zsh
+    command: bash
+
+  arch:
+    build:
+      dockerfile_inline: |
+        FROM archlinux:latest@sha256:4c53f5cc2575b95b1e93b8dea77b093b2bb95e8d38ca9500b01563de01112d5b
+        RUN yes | pacman -Sy bash curl htop git openssh rsync tmux wget zsh
+        RUN yes | pacman -Sy nix
+    command: zsh
+
+  nix:
+    build:
+      dockerfile_inline: |
+        FROM nixos/nix:2.21.4
+    command: zsh
