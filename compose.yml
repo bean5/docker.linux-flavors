@@ -17,6 +17,13 @@ services:
         RUN yes | pacman -Sy nix
     command: zsh
 
+  kali:
+    build:
+      dockerfile_inline: |
+        FROM kalilinux/kali-rolling
+        # RUN apt update && apt -y install kali-linux-headless
+    command: bash
+
   nix:
     build:
       dockerfile_inline: |
