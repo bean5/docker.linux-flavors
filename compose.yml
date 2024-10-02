@@ -21,4 +21,4 @@ services:
     build:
       dockerfile_inline: |
         FROM nixos/nix:2.21.4
-    command: zsh
+    command: bash
