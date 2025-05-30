@@ -1,9 +1,8 @@
-Linux Flavors
----
+# Linux Flavors
 
 A quick way to try Linux flavors via docker. Easy to extend. Quick to try:
 
-```
+```sh
 docker compose run alpine
 docker compose run arch
 docker compose run nix
