@@ -14,8 +14,6 @@ Arch, Alpine, and NixOS...what more can you ask for?
 
 ## Notes
 
-I used pinned versions of the distributions, but you can easily just use `:latest` tags.
-
 Yes, you could just use vanilla docker-commands, but between learning and applying, you have a sandbox in `compose.yml` for storing your knowledge. For example, you can update the file to encode updates to run, favorite packages, etc. The sandbox is yours to enjoy.
 
 ## Contributions
